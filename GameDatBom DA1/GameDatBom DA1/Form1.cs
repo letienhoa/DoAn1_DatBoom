@@ -26,7 +26,7 @@ namespace GameDatBom_DA1
         bool bienphai=false;
         bool bientren=false;
         bool bienduoi=false;
-        int tocdochoi = 5;
+        int tocdochoi = 35;
 
 
         Point goc1;
@@ -93,13 +93,20 @@ namespace GameDatBom_DA1
                 xuongduoi = false;
             }
         }
-
+        
         private void Timer1_Tick(object sender, EventArgs e)
         {
+            foreach(Control x in this.Controls)
+            {
+                if(x is Timer&& x.Tag=="thoigian")
+                {
+                   
+                }
+            }
             if (sangtrai)
             {
                
-                if (player.Left > 35 &&kiemtrabutton()!=1)
+                if (player.Left > 35 &&kiemtrabutton()==1)
                 {
                    
                     player.Left -= tocdochoi;
@@ -110,7 +117,7 @@ namespace GameDatBom_DA1
             else if (sangphai)
             {
              
-                if (player.Left < 565 - 35 && kiemtrabutton() != 2)
+                if (player.Left < 565 - 35 && kiemtrabutton() == 2)
                 {
              
                     player.Left += tocdochoi;
@@ -120,7 +127,7 @@ namespace GameDatBom_DA1
             else if (lentren)
             {
               
-                if (player.Top > 35 && kiemtrabutton() != 3)
+                if (player.Top > 35 && kiemtrabutton() == 3)
                 {
                     player.Top -= tocdochoi;
                     laytoado(ref goc1, ref goc2, ref goc3, ref goc4);
@@ -129,7 +136,7 @@ namespace GameDatBom_DA1
             else if (xuongduoi)
             {
                
-                if (player.Top < 492-35 && kiemtrabutton() != 4)
+                if (player.Top < 492-35 && kiemtrabutton() == 4)
                 {
                     player.Top += tocdochoi;
                     laytoado(ref goc1, ref goc2, ref goc3, ref goc4);
@@ -139,47 +146,34 @@ namespace GameDatBom_DA1
 
         private int kiemtrabutton()
         {
+            //toa do chuan
+            int goc1x = (player.Location.X) / 35;
+            int goc1y = (player.Location.Y) / 35;
+            int goc2x = (player.Location.X+35) / 35;
+            int goc2y = (player.Location.Y)/35;    
+            int goc3x = (player.Location.X+35) / 35;
+            int goc3y = (player.Location.Y+35) / 35;
+            int goc4x = (player.Location.X) / 35;
+            int goc4y = (player.Location.Y+35) / 35;
 
-            foreach (Control x in panel1.Controls)
+
+            if (LoaiMap.map1[goc1y, goc1x + 1] ==0 && sangphai == true )
             {
-                if (x is Button && ((Button )x).Tag.ToString() == "khongphaduoc")
-                {                    
-                    if((player.Bounds.IntersectsWith(((Button) x).Bounds))&& (goc4.Y-55)<(x.Location.Y) && sangtrai==true)
-                    {
-                        return 1;
-                    }
-                    
-                    else if ((player.Bounds.IntersectsWith(((Button)x).Bounds))&& (goc3.Y - 55) < (x.Location.Y) && sangphai == true)
-                        
-                    {
-                        return 2;
-                    }
-                    else if((player.Bounds.IntersectsWith(((Button)x).Bounds)) && (goc3.Y - 60) < (x.Location.Y) && lentren == true)
-                    {
-                        return 3;
-                    }
-                    else if (goc3.Y + 5 == x.Location.Y)
-                    {
-                        if(goc1.X==x.Location.X)
-                        {
-                            return 4;
-                        }
-                        else if()
-                        {
-
-                        }
-                    }
-                }
-                //if (x is Button && ((Button)x).Tag.ToString() == "diduoc")
-                //{
-                //    if (goc3.Y + 5 == x.Location.Y)
-                //    {
-                //        return 4;
-
-                //    }
-                //}
+                return 2;
             }
-            return 0;
+            else if (LoaiMap.map1[goc1y, goc1x - 1] == 0 && sangtrai == true)
+            {
+                return 1;
+            }
+            else if (LoaiMap.map1[goc1y + 1, goc1x] == 0 && xuongduoi == true)
+            {
+                return 4;
+            }
+            else if (LoaiMap.map1[goc1y - 1, goc1x] == 0&& lentren == true)
+            {
+                return 3;
+            }
+            else return 0;
         }
 
         private void laytoado(ref Point goc1, ref Point goc2, ref Point goc3, ref Point goc4)

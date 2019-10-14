@@ -17,3 +17,13 @@ C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1\GameDatBom DA1\o
 C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1\GameDatBom DA1\obj\Debug\GameDatBom DA1.csproj.GenerateResource.cache
 C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1\GameDatBom DA1\obj\Debug\GameDatBom DA1.exe
 C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1\GameDatBom DA1\obj\Debug\GameDatBom DA1.pdb
+C:\Users\HOA_DEV-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1\GameDatBom DA1\bin\Debug\GameDatBom DA1.exe.config
+C:\Users\HOA_DEV-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1\GameDatBom DA1\bin\Debug\GameDatBom DA1.exe
+C:\Users\HOA_DEV-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1\GameDatBom DA1\bin\Debug\GameDatBom DA1.pdb
+C:\Users\HOA_DEV-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1\GameDatBom DA1\obj\Debug\GameDatBom DA1.csprojAssemblyReference.cache
+C:\Users\HOA_DEV-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1\GameDatBom DA1\obj\Debug\GameDatBom_DA1.Form1.resources
+C:\Users\HOA_DEV-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1\GameDatBom DA1\obj\Debug\GameDatBom_DA1.Properties.Resources.resources
+C:\Users\HOA_DEV-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1\GameDatBom DA1\obj\Debug\GameDatBom DA1.csproj.GenerateResource.cache
+C:\Users\HOA_DEV-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1\GameDatBom DA1\obj\Debug\GameDatBom DA1.csproj.CoreCompileInputs.cache
+C:\Users\HOA_DEV-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1\GameDatBom DA1\obj\Debug\GameDatBom DA1.exe
+C:\Users\HOA_DEV-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1\GameDatBom DA1\obj\Debug\GameDatBom DA1.pdb
