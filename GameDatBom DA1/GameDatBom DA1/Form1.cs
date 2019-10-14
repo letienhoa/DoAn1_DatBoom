@@ -144,17 +144,37 @@ namespace GameDatBom_DA1
             {
                 if (x is Button && ((Button )x).Tag.ToString() == "khongphaduoc")
                 {                    
-                    if((player.Bounds.IntersectsWith(((Button) x).Bounds))&& (goc3.Y-55)<(x.Location.Y))
+                    if((player.Bounds.IntersectsWith(((Button) x).Bounds))&& (goc4.Y-55)<(x.Location.Y) && sangtrai==true)
+                    {
+                        return 1;
+                    }
+                    
+                    else if ((player.Bounds.IntersectsWith(((Button)x).Bounds))&& (goc3.Y - 55) < (x.Location.Y) && sangphai == true)
+                        
                     {
                         return 2;
-                        
+                    }
+                    else if((player.Bounds.IntersectsWith(((Button)x).Bounds)) && (goc3.Y - 60) < (x.Location.Y) && lentren == true)
+                    {
+                        return 3;
+                    }
+                    else if (goc3.Y + 5 == x.Location.Y)
+                    {
+                        if(goc1.X==x.Location.X)
+                        {
+                            return 4;
+                        }
+                        else if()
+                        {
+
+                        }
                     }
                 }
                 //if (x is Button && ((Button)x).Tag.ToString() == "diduoc")
                 //{
-                //    if ((player.Bounds.IntersectsWith(((Button)x).Bounds)))
+                //    if (goc3.Y + 5 == x.Location.Y)
                 //    {
-                //        return false;
+                //        return 4;
 
                 //    }
                 //}
