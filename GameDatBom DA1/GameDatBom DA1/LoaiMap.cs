@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameDatBom_DA1
 {
-    class LoaiMap
+   public static  class LoaiMap
     {
         public static int[,] map1 = new int[15, 18] {
         {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0},

@@ -12,106 +12,98 @@ namespace GameDatBom_DA1
 {
     public partial class Form1 : Form
     {
-        taogiaodien Program;
-
-       
-        
-        
+        taogiaodien Giaodien;     
         bool sangtrai;
         bool sangphai;
         bool lentren;
         bool xuongduoi;
-        
-        bool bientrai=false;
-        bool bienphai=false;
-        bool bientren=false;
-        bool bienduoi=false;
+        bool datbom;
+        List<Bomb> lstBombs = new List<Bomb>();
         int tocdochoi = 35;
 
-
-        Point goc1;
-        Point goc2;
-        Point goc3;
-        Point goc4;
 
         public Form1()
         {
             InitializeComponent();
-            Program = new taogiaodien(panel1);
-            Program.taomatran();
+            Giaodien = new taogiaodien(panel1);
+            Giaodien.taomatran();
             
         }
 
         private void Anxuong(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            switch (e.KeyCode)
             {
-                sangtrai = true;
-                player.Image = Properties.Resources.trai;
-                player.BackgroundImageLayout = ImageLayout.Stretch;
-                player.BackgroundImage = Properties.Resources.nen1;
+                case Keys.Left:
+                    sangtrai = true;
+                    player.Image = Properties.Resources.trai;
+                    player.BackgroundImageLayout = ImageLayout.Stretch;                   
+                    break;
+
+                case Keys.Right:
+                    sangphai = true;
+                    player.Image = Properties.Resources.phai;
+                    player.BackgroundImageLayout = ImageLayout.Stretch;                  
+                    break;
+
+                case Keys.Up:
+                    lentren = true;
+                    player.Image = Properties.Resources.sau;
+                    player.BackgroundImageLayout = ImageLayout.Stretch;                 
+                    break;
+
+                case Keys.Down:
+                    xuongduoi = true;
+                    player.Image = Properties.Resources.truoc2;
+                    player.BackgroundImageLayout = ImageLayout.Stretch;                   
+                    break;
+
+                case Keys.Space:
+                    datbom = true;
+                    xulybom(player.Location);
+                    break;
+
             }
-            if (e.KeyCode == Keys.Right)
-            {
-                sangphai = true;
-                player.Image = Properties.Resources.phai;
-                player.BackgroundImageLayout = ImageLayout.Stretch;
-                player.BackgroundImage = Properties.Resources.nen1;
-            }
-            if (e.KeyCode == Keys.Up)
-            {
-                lentren = true;
-                player.Image = Properties.Resources.sau;
-                player.BackgroundImageLayout = ImageLayout.Stretch;
-                player.BackgroundImage = Properties.Resources.nen1;
-            }
-            if (e.KeyCode == Keys.Down)
-            {
-                xuongduoi = true;
-                player.Image = Properties.Resources.truoc2;
-                player.BackgroundImageLayout = ImageLayout.Stretch;
-                player.BackgroundImage = Properties.Resources.nen1;
-            }
+
         }
 
         private void Anlen(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            switch(e.KeyCode)
             {
-                sangtrai = false;
+                case Keys.Left:
+                    sangtrai = false;
+                    break;
+                case Keys.Right:
+                    sangphai = false;
+                    break;
+                case Keys.Up:
+                    lentren = false;
+                    break;
+                case Keys.Down:
+                    xuongduoi = false;
+                    break;
+                case Keys.Space:
+                    datbom = false;
+                    break;
+
             }
-            if (e.KeyCode == Keys.Right)
-            {
-                sangphai = false;
-            }
-            if (e.KeyCode == Keys.Up)
-            {
-                lentren = false;
-            }
-            if (e.KeyCode == Keys.Down)
-            {
-                xuongduoi = false;
-            }
+          
         }
         
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            foreach(Control x in this.Controls)
+            if (kiemtradambom() == false)
             {
-                if(x is Timer&& x.Tag=="thoigian")
-                {
-                   
-                }
+                player.Location = new Point(35, 35);
+
             }
             if (sangtrai)
             {
                
                 if (player.Left > 35 &&kiemtrabutton()==1)
-                {
-                   
+                {  
                     player.Left -= tocdochoi;
-                    laytoado(ref goc1, ref goc2, ref goc3, ref goc4);
-                   
                 }
             }
             else if (sangphai)
@@ -119,9 +111,7 @@ namespace GameDatBom_DA1
              
                 if (player.Left < 565 - 35 && kiemtrabutton() == 2)
                 {
-             
-                    player.Left += tocdochoi;
-                    laytoado(ref goc1, ref goc2, ref goc3, ref goc4);
+                    player.Left += tocdochoi; 
                 }
             }
             else if (lentren)
@@ -130,7 +120,6 @@ namespace GameDatBom_DA1
                 if (player.Top > 35 && kiemtrabutton() == 3)
                 {
                     player.Top -= tocdochoi;
-                    laytoado(ref goc1, ref goc2, ref goc3, ref goc4);
                 }
             }
             else if (xuongduoi)
@@ -139,53 +128,76 @@ namespace GameDatBom_DA1
                 if (player.Top < 492-35 && kiemtrabutton() == 4)
                 {
                     player.Top += tocdochoi;
-                    laytoado(ref goc1, ref goc2, ref goc3, ref goc4);
                 }
             }
+          
         }
 
         private int kiemtrabutton()
         {
-            //toa do chuan
+          
             int goc1x = (player.Location.X) / 35;
             int goc1y = (player.Location.Y) / 35;
-            int goc2x = (player.Location.X+35) / 35;
-            int goc2y = (player.Location.Y)/35;    
-            int goc3x = (player.Location.X+35) / 35;
-            int goc3y = (player.Location.Y+35) / 35;
-            int goc4x = (player.Location.X) / 35;
-            int goc4y = (player.Location.Y+35) / 35;
 
-
-            if (LoaiMap.map1[goc1y, goc1x + 1] ==0 && sangphai == true )
+            if (LoaiMap.map1[goc1y, goc1x + 1] !=1 && sangphai == true )
             {
                 return 2;
             }
-            else if (LoaiMap.map1[goc1y, goc1x - 1] == 0 && sangtrai == true)
+            else if (LoaiMap.map1[goc1y, goc1x - 1] != 1 && sangtrai == true)
             {
                 return 1;
             }
-            else if (LoaiMap.map1[goc1y + 1, goc1x] == 0 && xuongduoi == true)
+            else if (LoaiMap.map1[goc1y + 1, goc1x] != 1 && xuongduoi == true)
             {
                 return 4;
             }
-            else if (LoaiMap.map1[goc1y - 1, goc1x] == 0&& lentren == true)
+            else if (LoaiMap.map1[goc1y - 1, goc1x] != 1 && lentren == true)
             {
                 return 3;
             }
             else return 0;
         }
-
-        private void laytoado(ref Point goc1, ref Point goc2, ref Point goc3, ref Point goc4)
+        private  bool kiemtradambom()
         {
-            goc1.X = player.Location.X;
-            goc1.Y = player.Location.Y;
-            goc2.X = player.Location.X+player.Width;
-            goc2.Y = player.Location.Y;
-            goc3.X = player.Location.X+player.Width;
-            goc3.Y = player.Location.Y+player.Height;
-            goc4.X = player.Location.X;
-            goc4.Y = player.Location.Y+player.Height;
+            int x = (player.Location.X) / 35;
+            int y = (player.Location.Y) / 35;
+            if(LoaiMap.map1[y,x]==2)
+            {
+                return false;
+            }
+            return true;
+        }
+        private void xulybom(Point player)
+        {
+            
+            foreach(Control x in this.panel1.Controls)
+            {
+                //kiểm tra button x có đủ điều kiện để dặt bom
+                if (x is Button && x.Location.X== player.X && x.Location.Y== player.Y)
+                {
+                    int goc1x = (player.X) / 35;
+                    int goc1y = (player.Y) / 35;
+                    x.BackgroundImage= Properties.Resources.bomb;
+                    x.BackgroundImageLayout = ImageLayout.Stretch;
+                    LoaiMap.map1[goc1y,goc1x] = 1;
+                    Bomb btnBomb = new Bomb(x, Bomb.BombImage.bomb);
+                    btnBomb.MatBomb += Mat_btnBomb;
+                    this.lstBombs.Add(btnBomb);                    
+                }
+            }           
+        }
+        private void Mat_btnBomb(object sender, EventArgs e)
+        {
+            Bomb objBomb = sender as Bomb;
+            if (objBomb != null)
+            {
+                lstBombs.Remove(objBomb);
+                Point a = objBomb.btnBomb.Location;
+             //   LoaiMap.map1[a.Y / 35, a.X / 35] = 0;
+
+                objBomb.Dispose();
+                
+            }
         }
     }
 }
