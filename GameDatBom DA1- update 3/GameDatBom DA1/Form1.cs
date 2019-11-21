@@ -12,31 +12,37 @@ namespace GameDatBom_DA1
 {
     public partial class Form1 : Form
     {
-        taogiaodien Program;
-
-       
-        
-        
+        taogiaodien Giaodien;
         bool sangtrai;
         bool sangphai;
         bool lentren;
         bool xuongduoi;
+        bool bot1sangtrai;
+        bool bot1sangphai;
+        bool bot2sangtrai;
+        bool bot2sangphai;
+        bool bot3sangtrai;
+        bool bot3sangphai;
         bool datbom;
-        List<Bomb> lstBombs = new List<Bomb>();
-        int tocdochoi = 35;
-
-
-        Point goc1;
-        Point goc2;
-        Point goc3;
-        Point goc4;
+        int tocdobot = 35;
+        int tocdochoi = 3;
+        int tran1 = 0;
+        int tran2 = 0;
+        int tran3 = 0;
+        DateTime timebot1;
+        DateTime timebot2;
+        DateTime timebot3;
+        int diem = 0;  
+        int live = 3;
+        bool win = false;
+       public static int boom = 0;
 
         public Form1()
         {
             InitializeComponent();
-            Program = new taogiaodien(panel1);
-            Program.taomatran();
-            
+            Giaodien = new taogiaodien(panel1);
+            Giaodien.taomatran();
+            label3.ForeColor = Color.Red;
         }
 
         private void Anxuong(object sender, KeyEventArgs e)
@@ -47,75 +53,43 @@ namespace GameDatBom_DA1
                     sangtrai = true;
                     player.Image = Properties.Resources.trai;
                     player.BackgroundImageLayout = ImageLayout.Stretch;
-                    player.BackgroundImage = Properties.Resources.nen1;
                     break;
+
                 case Keys.Right:
                     sangphai = true;
                     player.Image = Properties.Resources.phai;
                     player.BackgroundImageLayout = ImageLayout.Stretch;
-                    player.BackgroundImage = Properties.Resources.nen1;
                     break;
+
                 case Keys.Up:
                     lentren = true;
                     player.Image = Properties.Resources.sau;
                     player.BackgroundImageLayout = ImageLayout.Stretch;
-                    player.BackgroundImage = Properties.Resources.nen1;
                     break;
+
                 case Keys.Down:
                     xuongduoi = true;
                     player.Image = Properties.Resources.truoc2;
                     player.BackgroundImageLayout = ImageLayout.Stretch;
-                    player.BackgroundImage = Properties.Resources.nen1;
                     break;
+
                 case Keys.Space:
-                    datbom = true;
-                    //Point h = player.Location;
-                    xulybom(player.Location);
-                    
+                    if (boom < 2)
+                    {
+                        datbom = true;
+                        boom++;
+                        xulybom(player.Location);
+                    }  
                     break;
+                    
 
             }
-            //if (e.KeyCode == Keys.Left)
-            //{
-            //    sangtrai = true;
-            //    player.Image = Properties.Resources.trai;
-            //    player.BackgroundImageLayout = ImageLayout.Stretch;
-            //    player.BackgroundImage = Properties.Resources.nen1;
-            //}
-            //if (e.KeyCode == Keys.Right)
-            //{
-            //    sangphai = true;
-            //    player.Image = Properties.Resources.phai;
-            //    player.BackgroundImageLayout = ImageLayout.Stretch;
-            //    player.BackgroundImage = Properties.Resources.nen1;
-            //}
-            //if (e.KeyCode == Keys.Up)
-            //{
-            //    lentren = true;
-            //    player.Image = Properties.Resources.sau;
-            //    player.BackgroundImageLayout = ImageLayout.Stretch;
-            //    player.BackgroundImage = Properties.Resources.nen1;
-            //}
-            //if (e.KeyCode == Keys.Down)
-            //{
-            //    xuongduoi = true;
-            //    player.Image = Properties.Resources.truoc2;
-            //    player.BackgroundImageLayout = ImageLayout.Stretch;
-            //    player.BackgroundImage = Properties.Resources.nen1;
-            //}
-            //if (e.KeyCode == Keys.Enter)
-            //{
-            //    datbom = true;
-            //    Point h = player.Location;
-            //    xulybom(h);
-
-            //}
 
         }
 
         private void Anlen(object sender, KeyEventArgs e)
         {
-            switch(e.KeyCode)
+            switch (e.KeyCode)
             {
                 case Keys.Left:
                     sangtrai = false;
@@ -134,150 +108,366 @@ namespace GameDatBom_DA1
                     break;
 
             }
-            //if (e.KeyCode == Keys.Left)
-            //{
-            //    sangtrai = false;
-            //}
-            //if (e.KeyCode == Keys.Right)
-            //{
-            //    sangphai = false;
-            //}
-            //if (e.KeyCode == Keys.Up)
-            //{
-            //    lentren = false;
-            //}
-            //if (e.KeyCode == Keys.Down)
-            //{
-            //    xuongduoi = false;
-            //}
-            //if (e.KeyCode == Keys.Enter)
-            //{
-            //    datbom = false;
-            //}
-        }
-        
-        private void Timer1_Tick(object sender, EventArgs e)
-        {
-            if (sangtrai)
-            {
-               
-                if (player.Left > 35 &&kiemtrabutton()==1)
-                {
-                   
-                    player.Left -= tocdochoi;
-                    laytoado(ref goc1, ref goc2, ref goc3, ref goc4);
-                   
-                }
-            }
-            else if (sangphai)
-            {
-             
-                if (player.Left < 565 - 35 && kiemtrabutton() == 2)
-                {
-             
-                    player.Left += tocdochoi;
-                    laytoado(ref goc1, ref goc2, ref goc3, ref goc4);
-                }
-            }
-            else if (lentren)
-            {
-              
-                if (player.Top > 35 && kiemtrabutton() == 3)
-                {
-                    player.Top -= tocdochoi;
-                    laytoado(ref goc1, ref goc2, ref goc3, ref goc4);
-                }
-            }
-            else if (xuongduoi)
-            {
-               
-                if (player.Top < 492-35 && kiemtrabutton() == 4)
-                {
-                    player.Top += tocdochoi;
-                    laytoado(ref goc1, ref goc2, ref goc3, ref goc4);
-                }
-            }
-          
+
         }
 
-        private int kiemtrabutton()
+
+        //ham nguoi choi di chuyển và xử lý
+        private void Timer1_Tick(object sender, EventArgs e)
+        {           
+            label4.Text = diem.ToString();
+            label3.Text = live.ToString();
+            if (kiemtradambom(player)==true)
+            {
+                live--;
+                player.Location = new Point(35, 35);
+            }
+            if (kiemtradungquai() == true)
+            {
+                live--;
+                player.Location = new Point(35, 35);
+            }
+            kiemtraluomdo(player);
+            if (sangtrai && kiemtrabutton(player) == 1)
+            {
+                    player.Left -= tocdobot;
+            }
+            else if (sangphai && kiemtrabutton(player) == 2)
+            {
+                    player.Left += tocdobot;
+            }
+            else if (lentren && kiemtrabutton(player) == 3)
+            {
+                    player.Top -= tocdobot;
+            }
+            else if (xuongduoi && kiemtrabutton(player) == 4)
+            {
+                    player.Top += tocdobot;
+            }
+            label4.Text = diem.ToString();
+            label3.Text = live.ToString();
+        }
+
+
+        // kiểm tra đụng quái ,nếu đụng sẽ bị mất 1 mạng và về vị trí gốc
+        private bool kiemtradungquai()
         {
-            //toa do chuan
+            foreach (Control x in panel1.Controls)
+            {
+                if (x is PictureBox && x.Tag == "bot"&&x.Visible==true)
+                {
+                   if (((PictureBox)x).Bounds.IntersectsWith(player.Bounds))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        // hàm kiểm tra xem có lút  đc đồ hay không
+        private int kiemtraluomdo(PictureBox player)
+        {
+            int x = (player.Location.X) / 35;
+            int y = (player.Location.Y) / 35;
+            //lượm đc mạng sống thì trả về 1
+            if (taogiaodien.mangluu[y][x].Tag=="live")
+            {
+                if (live < 5)
+                {
+                    live++;
+                }
+                taogiaodien.mangluu[y][x].BackgroundImage = Properties.Resources.nen1;
+                taogiaodien.mangluu[y][x].Tag = "diduoc";
+                return 1;
+            }
+            //lượm được vàng thì trả về 2
+            else if (taogiaodien.mangluu[y][x].Tag=="vang")
+            {
+                diem = diem + 30;
+                taogiaodien.mangluu[y][x].BackgroundImage = Properties.Resources.nen1;
+                taogiaodien.mangluu[y][x].Tag = "diduoc";
+                return 2;
+            }
+            // trung loi thoat thi win
+            else if (taogiaodien.mangluu[y][x].Tag == "loithoat")
+            {
+                win = true;
+                return 3;
+            }
+            //ko có gì thì trả về 0
+            else return 0;
+        }
+
+        
+        //kiểm  tra đường đi cho người chơi
+        private int kiemtrabutton(PictureBox player)
+        {
+
             int goc1x = (player.Location.X) / 35;
             int goc1y = (player.Location.Y) / 35;
-            int goc2x = (player.Location.X+35) / 35;
-            int goc2y = (player.Location.Y)/35;    
-            int goc3x = (player.Location.X+35) / 35;
-            int goc3y = (player.Location.Y+35) / 35;
-            int goc4x = (player.Location.X) / 35;
-            int goc4y = (player.Location.Y+35) / 35;
 
-
-            if (LoaiMap.map1[goc1y, goc1x + 1] ==0 && sangphai == true )
+            if (LoaiMap.map1[goc1y, goc1x + 1] != 1 && 
+                LoaiMap.map1[goc1y, goc1x + 1] != 3 && sangphai == true)
             {
                 return 2;
             }
-            else if (LoaiMap.map1[goc1y, goc1x - 1] == 0 && sangtrai == true)
+            else if (LoaiMap.map1[goc1y, goc1x - 1] != 1 &&
+                LoaiMap.map1[goc1y, goc1x - 1] != 3 && sangtrai == true)
             {
                 return 1;
             }
-            else if (LoaiMap.map1[goc1y + 1, goc1x] == 0 && xuongduoi == true)
+            else if (LoaiMap.map1[goc1y + 1, goc1x] != 1 &&
+                LoaiMap.map1[goc1y + 1, goc1x] != 3 && xuongduoi == true)
             {
                 return 4;
             }
-            else if (LoaiMap.map1[goc1y - 1, goc1x] == 0&& lentren == true)
+            else if (LoaiMap.map1[goc1y - 1, goc1x] != 1 &&
+                LoaiMap.map1[goc1y - 1, goc1x] != 3 && lentren == true)
             {
                 return 3;
             }
             else return 0;
         }
 
-        private void laytoado(ref Point goc1, ref Point goc2, ref Point goc3, ref Point goc4)
+        
+        //kiểm tra dẫm boom và đụng bot là quay về vị trí cũ 
+        // mất thêm một mạng
+        private bool kiemtradambom(PictureBox player)
         {
-            goc1.X = player.Location.X;
-            goc1.Y = player.Location.Y;
-            goc2.X = player.Location.X+player.Width;
-            goc2.Y = player.Location.Y;
-            goc3.X = player.Location.X+player.Width;
-            goc3.Y = player.Location.Y+player.Height;
-            goc4.X = player.Location.X;
-            goc4.Y = player.Location.Y+player.Height;
-        }
-        private void xulybom(Point player)
-        {
-            foreach(Control bomb in this.panel1.Controls)
+            int x = (player.Location.X) / 35;
+            int y = (player.Location.Y) / 35;
+            if (LoaiMap.map1[y, x] == 2)
             {
-                if(bomb is Button && bomb.Location.X== player.X && bomb.Location.Y== player.Y)
+                if ( y != 13 && x != 14)
+                {
+                    return true;
+                } 
+            }
+            return false;
+        }
+
+       
+        //xử lý boom sau khi đặt xong bao gồm cả 2 hàm này
+        private void xulybom(Point player) 
+        {
+
+            foreach (Control x in this.panel1.Controls)
+            {
+                //kiểm tra button x có đủ điều kiện để dặt bom
+                if (x is Button && x.Location.X == player.X && x.Location.Y == player.Y)
                 {
                     int goc1x = (player.X) / 35;
                     int goc1y = (player.Y) / 35;
-                    bomb.BackgroundImage= Properties.Resources.bomb;
-                    bomb.BackgroundImageLayout = ImageLayout.Stretch;
-                    LoaiMap.map1[goc1y,goc1x] = 1;
-                    Bomb btnBomb = new Bomb(bomb, Bomb.BombImage.bomb);
+                    x.BackgroundImage = Properties.Resources.bomb;
+                    x.BackgroundImageLayout = ImageLayout.Stretch;
+                    LoaiMap.map1[goc1y, goc1x] = 1;
+                    Bomb btnBomb = new Bomb(x, Bomb.BombImage.bomb);
                     btnBomb.MatBomb += Mat_btnBomb;
-                    this.lstBombs.Add(btnBomb);
-                    
+                   
                 }
-            }           
+            }
         }
-
         private void Mat_btnBomb(object sender, EventArgs e)
         {
             Bomb objBomb = sender as Bomb;
             if (objBomb != null)
             {
-                lstBombs.Remove(objBomb);
-                Point a = objBomb.btnBomb.Location;
-                LoaiMap.map1[a.Y/35, a.X/35] = 0;
-
-                foreach (Control bombNo in this.panel1.Controls)
-                {
-                    Bomb bombLan = new Bomb(bombNo, Bomb.BombImage.bombbang);
-                }
-
                 objBomb.Dispose();
-                
+            }
+        }
+
+
+        //hàm timer2,3,4 la của 3 con bot cho nó chạy qua lại
+       //trong đó có luôn kiểm tra dẫm boom ,nếu dẫm bom thì điểm tăng 10
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (DateTime.Now > timebot1)
+            {
+                bot1.Visible = true;
+            }
+            if (bot1.Visible==true && kiemtradambom(bot1) == true)
+            {
+                diem += 10;
+                xulyanbot(bot1);
+
+            }
+            kiemtraduongdibot(bot1);
+            if (bot1sangtrai && tran1 == 0)
+            {
+                bot1.Image = Properties.Resources.bottrai;
+                bot1.Left -= tocdochoi;
+            }
+            else if(bot1sangtrai==false)
+            {
+                tran1 = 1;
+            }
+            if (bot1sangphai && tran1==1)
+            {
+                bot1.Image = Properties.Resources.botphai;
+                bot1.Left += tocdochoi;     
+            }
+            else if (bot1sangphai == false)
+            {
+                tran1 = 0;
+            }
+            
+            
+        }
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            if (DateTime.Now > timebot2)
+            {
+                bot2.Visible = true;
+            }
+            if (bot2.Visible == true && kiemtradambom(bot2) == true)
+            {
+                diem += 10;
+                xulyanbot(bot2);
+
+            }
+            kiemtraduongdibot(bot2);
+            if (bot2sangtrai && tran2 ==1)
+            {
+                bot2.Image = Properties.Resources.bottrai;
+                bot2.Left -= tocdochoi;
+            }
+            else if (bot2sangtrai == false)
+            {
+                tran2 = 0;
+            }
+            if (bot2sangphai && tran2 == 0)
+            {
+                bot2.Image = Properties.Resources.botphai;
+                bot2.Left += tocdochoi;
+            }
+            else if (bot2sangphai == false)
+            {
+                tran2 = 1;
+            }
+
+        }
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            if (DateTime.Now > timebot3)
+            {
+                bot3.Visible = true;
+            }
+            if (bot3.Visible == true && kiemtradambom(bot3) == true)
+            {
+                diem += 10;
+                xulyanbot(bot3);
+
+            }
+            kiemtraduongdibot(bot3);
+            if (bot3sangtrai && tran3 == 0)
+            {
+                bot3.Image = Properties.Resources.bottrai;
+                bot3.Left -= tocdochoi;
+            }
+            else if (bot3sangtrai == false)
+            {
+                tran3 = 1;
+            }
+            if (bot3sangphai && tran3 == 1)
+            {
+                bot3.Image = Properties.Resources.botphai;
+                bot3.Left += tocdochoi;
+            }
+            else if (bot3sangphai == false)
+            {
+                tran3 = 0;
+            }
+
+        }
+
+
+        //kiểm tra đường đi của bot có bị cản trở hay ko để 
+        //phục vụ cho di chuyển
+        private void kiemtraduongdibot(PictureBox player)
+        {
+
+            int goc1x = (player.Location.X) / 35;
+            int goc1y = (player.Location.Y) / 35;
+            if (player.Name == "bot1")
+            {
+                if (LoaiMap.map1[goc1y, goc1x+1] != 1&& LoaiMap.map1[goc1y, goc1x + 1] != 3)
+                {
+                    bot1sangphai = true;
+
+                }
+                else { bot1sangphai = false; }
+
+                if (LoaiMap.map1[goc1y, goc1x] != 1 && LoaiMap.map1[goc1y, goc1x] != 3)
+                {
+                    bot1sangtrai = true;
+                }
+                else { bot1sangtrai = false; }
+            }
+            else if (player.Name == "bot2")
+            {
+                if (LoaiMap.map1[goc1y, goc1x+1] != 1 && LoaiMap.map1[goc1y, goc1x + 1] != 3)
+                {
+                    bot2sangphai = true;
+
+                }
+                else { bot2sangphai = false; }
+
+                if (LoaiMap.map1[goc1y, goc1x] != 1 && LoaiMap.map1[goc1y, goc1x] != 3)
+                {
+                    bot2sangtrai = true;
+                }
+                else { bot2sangtrai = false; }
+            }
+            //bot3
+            else if (player.Name == "bot3")
+            {
+                if (LoaiMap.map1[goc1y, goc1x+1] != 1 && LoaiMap.map1[goc1y, goc1x + 1] != 3)
+                {
+                    bot3sangphai = true;
+
+                }
+                else { bot3sangphai = false; }
+
+                if (LoaiMap.map1[goc1y, goc1x] != 1 && LoaiMap.map1[goc1y, goc1x] != 3)
+                {
+                    bot3sangtrai = true;
+                }
+                else { bot3sangtrai = false; }
+            }
+        }
+
+
+        //nếu bot dẫm boom thì vào đây cho mất 5s sau đó sẽ hồi sinh lại 
+        // mất là ẩn đi 5s ,sau đó hiện lên lại 
+        private void xulyanbot(PictureBox bot)
+        {
+            bot.Visible = false;
+            if (bot.Name == "bot1")
+            {
+                timebot1 = DateTime.Now.AddSeconds(5);
+            }
+            if (bot.Name == "bot2")
+            {
+                timebot2 = DateTime.Now.AddSeconds(5);
+            }
+            if (bot.Name == "bot3")
+            {
+                timebot3 = DateTime.Now.AddSeconds(5);
+            }
+        }
+
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            if (live == 0)
+            {
+                timer1.Stop();
+                label5.Visible = true;
+            }
+            else if(win==true)
+            {
+                timer1.Stop();
+                label6.Visible = true;
             }
         }
     }

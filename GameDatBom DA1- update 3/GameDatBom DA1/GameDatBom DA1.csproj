@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bomb.cs" />
+    <Compile Include="BomNoRa.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +153,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\truoc2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bombbang1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thunghang .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youdie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\live.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loithoat.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

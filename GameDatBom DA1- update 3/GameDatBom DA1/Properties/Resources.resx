@@ -118,73 +118,94 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="nen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nen1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trai" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sau" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bottrai" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bottrai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="phai" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\phai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bombbang_down_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bombbang_down_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bottruoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bottruoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botphai" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botphai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bomb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bomb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botsau" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botsau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bombbang_down_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bombbang_down_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bombbang_down_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bombbang_down_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bombbang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bombbang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nenmoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nenmoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="da" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\da.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bombbang_left_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bombbang_left_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bombbang_up_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bombbang_up_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bombbang1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bombbang1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="truoc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\truoc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bombbang_right_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bombbang_right_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botsau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botsau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="da" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\da.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bombbang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bombbang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botphai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botphai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="live" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\live.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bombbang_up_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bombbang_up_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="trai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nenmoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nenmoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bombbang_down_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bombbang_down_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bombbang_left_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bombbang_left_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="phai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="truoc2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\truoc2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bombbang_right_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bombbang_right_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="truoc2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\truoc2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bomb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bomb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="youdie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\youdie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bombbang_right_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bombbang_right_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thunghang " type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thunghang .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nen1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bombbang_up_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bombbang_up_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bottrai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bottrai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loithoat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loithoat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

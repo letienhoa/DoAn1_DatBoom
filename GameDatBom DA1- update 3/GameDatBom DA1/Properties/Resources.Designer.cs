@@ -163,6 +163,16 @@ namespace GameDatBom_DA1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bombbang1 {
+            get {
+                object obj = ResourceManager.GetObject("bombbang1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botphai {
             get {
                 object obj = ResourceManager.GetObject("botphai", resourceCulture);
@@ -206,6 +216,36 @@ namespace GameDatBom_DA1.Properties {
         internal static System.Drawing.Bitmap da {
             get {
                 object obj = ResourceManager.GetObject("da", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap live {
+            get {
+                object obj = ResourceManager.GetObject("live", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loithoat {
+            get {
+                object obj = ResourceManager.GetObject("loithoat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mang {
+            get {
+                object obj = ResourceManager.GetObject("mang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +303,16 @@ namespace GameDatBom_DA1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap thunghang_ {
+            get {
+                object obj = ResourceManager.GetObject("thunghang ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap trai {
             get {
                 object obj = ResourceManager.GetObject("trai", resourceCulture);
@@ -286,6 +336,26 @@ namespace GameDatBom_DA1.Properties {
         internal static System.Drawing.Bitmap truoc2 {
             get {
                 object obj = ResourceManager.GetObject("truoc2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vang {
+            get {
+                object obj = ResourceManager.GetObject("vang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap youdie {
+            get {
+                object obj = ResourceManager.GetObject("youdie", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

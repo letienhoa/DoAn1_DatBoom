@@ -18,19 +18,18 @@ namespace GameDatBom_DA1
         {
             this.khungbando = pnl1;
         }
-        public List<List<Button>> mangluu;
+        public static List<List<Button>> mangluu = new List<List<Button>>();
 
 
         public void taomatran()
         {
-            mangluu = new List<List<Button>>();
+
             Button kc = new Button()
             {
                 Width = 0,
                 Height = 0,
                 Location = new Point(0, 0)
             };
-            int x = 0, y = 0;
             for (int i = 0; i < Map.Chieurong; i++)
             {
                 mangluu.Add(new List<Button>());
@@ -58,7 +57,14 @@ namespace GameDatBom_DA1
                         h.BackgroundImage = Properties.Resources.nen1;
                         h.BackgroundImageLayout = ImageLayout.Stretch;
                         h.Tag = "diduoc";
-                      
+
+                    }
+                    if (LoaiMap.map1[i, j] == 3)
+                    {
+                        h.BackgroundImage = Properties.Resources.thunghang_;
+                        h.BackgroundImageLayout = ImageLayout.Stretch;
+                        h.Tag = "diduoc";
+
                     }
                     khungbando.Controls.Add(h);
                     mangluu[i].Add(h);
