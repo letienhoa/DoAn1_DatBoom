@@ -45,3 +45,16 @@ C:\Users\Hoa-Dev-2811\Downloads\Hoa-Vuong-DoAn1-master\GameDatBom DA1- update 3\
 C:\Users\Hoa-Dev-2811\Downloads\Hoa-Vuong-DoAn1-master\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom DA1.csproj.GenerateResource.cache
 C:\Users\Hoa-Dev-2811\Downloads\Hoa-Vuong-DoAn1-master\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom DA1.exe
 C:\Users\Hoa-Dev-2811\Downloads\Hoa-Vuong-DoAn1-master\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom DA1.pdb
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\bin\Debug\GameDatBom DA1.exe.config
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\bin\Debug\GameDatBom DA1.exe
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\bin\Debug\GameDatBom DA1.pdb
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom DA1.csprojAssemblyReference.cache
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom_DA1.Form1.resources
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom_DA1.Properties.Resources.resources
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom DA1.csproj.GenerateResource.cache
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom DA1.exe
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom DA1.pdb
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom_DA1.StartGame.resources
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom_DA1.Score.resources
+C:\Users\LENOVO\Desktop\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom_DA1.Score.resources
+C:\Users\LENOVO\Desktop\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom_DA1.StartGame.resources

@@ -213,6 +213,16 @@ namespace GameDatBom_DA1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Capture {
+            get {
+                object obj = ResourceManager.GetObject("Capture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap da {
             get {
                 object obj = ResourceManager.GetObject("da", resourceCulture);
@@ -296,6 +306,16 @@ namespace GameDatBom_DA1.Properties {
         internal static System.Drawing.Bitmap sau {
             get {
                 object obj = ResourceManager.GetObject("sau", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Score {
+            get {
+                object obj = ResourceManager.GetObject("Score", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
