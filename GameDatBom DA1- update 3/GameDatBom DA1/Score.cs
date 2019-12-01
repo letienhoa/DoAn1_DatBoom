@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,31 +20,27 @@ namespace GameDatBom_DA1
         }
         private void LoadTable()
         {
-            List<DIEM> listData = DiemDAO.Instance.LoadDiem();
-           //
-            tbxtop1.Text = listData[0].Diem;
-            tbxtop2.Text = listData[1].Diem;
-            tbxtop3.Text = listData[2].Diem;
-            tbxtop4.Text = listData[3].Diem;
-            tbxtop5.Text = listData[4].Diem;
-            tbxtop6.Text = listData[5].Diem;
-            tbxtop7.Text = listData[6].Diem;
-            tbxtop8.Text = listData[7].Diem;
-            tbxtop9.Text = listData[8].Diem;
-            tbxtop10.Text = listData[9].Diem;
+            Docdulieu();
+            int max1 = taogiaodien.listdiem[0];
+           
             //
-            lbtop1.Text = listData[0].Name;
-            lbtop2.Text = listData[1].Name;
-            lbtop3.Text = listData[2].Name;
-            lbtop4.Text = listData[3].Name;
-            lbtop5.Text = listData[4].Name;
-            lbtop6.Text = listData[5].Name;
-            lbtop7.Text = listData[6].Name;
-            lbtop8.Text = listData[7].Name;
-            lbtop9.Text = listData[8].Name;
-            lbtop10.Text = listData[9].Name;
+            tbxtop1.Text = max1.ToString();
+            
 
 
+        }
+        public void  Docdulieu()
+        {
+            FileStream fs = new FileStream("input.txt", FileMode.Open, FileAccess.Read);
+            StreamReader sr = new StreamReader(fs);
+            string val = sr.ReadLine();
+            while(val!=null)
+            {
+                taogiaodien.listdiem.Add(Convert.ToInt32(val));
+                val = sr.ReadLine();
+            }
+            sr.Close();
+            fs.Close();
         }
 
 

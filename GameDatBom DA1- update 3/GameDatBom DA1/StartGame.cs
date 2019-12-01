@@ -19,17 +19,17 @@ namespace GameDatBom_DA1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
-            this.Hide();
+            
+            Play form = new Play();
+            this.Visible = false;
             form.ShowDialog();
-            this.Show();
+
+            this.Close();
+          
+     
         }
 
-        private void StartGame_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Ban muon thoat", "Thong Bao", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-            { e.Cancel = true; }
-        }
+     
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -39,6 +39,12 @@ namespace GameDatBom_DA1
             this.Show();
         }
 
-      
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Huongdan form = new Huongdan();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -51,7 +51,7 @@ namespace GameDatBom_DA1
         // xoa hình sau khi hết time của bom
         private void BombNo()
         {
-            Form1.boom--;
+            Play.boom--;
             this.ThoiGianBomb.Enabled = false;
             if (this.MatBomb != null)
             {
