@@ -49,7 +49,6 @@ C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDa
 C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\bin\Debug\GameDatBom DA1.exe
 C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\bin\Debug\GameDatBom DA1.pdb
 C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom DA1.csprojAssemblyReference.cache
-C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom_DA1.Form1.resources
 C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom_DA1.Properties.Resources.resources
 C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom DA1.csproj.GenerateResource.cache
 C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom DA1.exe
@@ -70,3 +69,5 @@ C:\Users\Hoa-Dev-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1- update 3\Ga
 C:\Users\Hoa-Dev-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom DA1.pdb
 C:\Users\Hoa-Dev-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom_DA1.Play.resources
 C:\Users\Hoa-Dev-2811\Desktop\Hoa-Vuong-DoAn1-master\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom_DA1.Huongdan.resources
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom_DA1.Play.resources
+C:\Users\LENOVO\Documents\GitHub\Hoa-Vuong-DoAn1\GameDatBom DA1- update 3\GameDatBom DA1\obj\Debug\GameDatBom_DA1.Huongdan.resources

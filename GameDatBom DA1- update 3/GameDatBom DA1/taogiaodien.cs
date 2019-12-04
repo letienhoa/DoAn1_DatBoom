@@ -18,8 +18,8 @@ namespace GameDatBom_DA1
         {
             this.khungbando = pnl1;
         }
-        public static List<List<Button>> mangluu = new List<List<Button>>();
-        public static List<int> listdiem = new List<int>();
+        public static List<List<Button>> mangluu = new List<List<Button>>(); //Mảng 2 chiều
+        public static List<int> listdiem = new List<int>(); 
 
         public void taomatran()
         {
