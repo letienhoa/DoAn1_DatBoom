@@ -42,7 +42,5 @@ namespace GameDatBom_DA1
             sr.Close();
             fs.Close();
         }
-
-
     }
 }

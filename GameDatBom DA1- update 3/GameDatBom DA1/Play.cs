@@ -379,6 +379,44 @@ namespace GameDatBom_DA1
 
         }
 
+        //hàm 5 với formclose là đóng lại
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            if (live == 0)
+            {
+                timer1.Stop();
+                label5.Visible = true;
+            }
+            else if (win == true)
+            {
+                timer1.Stop();
+                label6.Visible = true;
+                FileStream fs = new FileStream("input.txt", FileMode.Open, FileAccess.Read);
+                StreamReader sr = new StreamReader(fs);
+                string val = sr.ReadLine();
+                while (val != null)
+                {
+                    taogiaodien.listdiem.Add(Convert.ToInt32(val));
+                    val = sr.ReadLine();
+                }
+                sr.Close();
+                fs.Close();
+                if (taogiaodien.listdiem[0] < diem)
+                {
+                    FileStream luu = new FileStream("input.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                    StreamWriter sw = new StreamWriter(luu);
+                    sw.WriteLine(label4.Text);
+                    sw.Close();
+                    luu.Close();
+                }
+            }
+        }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Mọi dữ liệu sẽ mất khi bạn thoát, bạn chắc chứ", "Thong Bao", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            { e.Cancel = true; }
+
+        }
 
         //kiểm tra đường đi của bot có bị cản trở hay ko để 
         //phục vụ cho di chuyển
@@ -455,44 +493,9 @@ namespace GameDatBom_DA1
             }
         }
 
-        private void timer5_Tick(object sender, EventArgs e)
-        {
-            if (live == 0)
-            {
-                timer1.Stop();
-                label5.Visible = true;
-            }
-            else if(win==true)
-            {
-                timer1.Stop();
-                label6.Visible = true;
-                FileStream fs = new FileStream("input.txt", FileMode.Open, FileAccess.Read);
-                StreamReader sr = new StreamReader(fs);
-                string val = sr.ReadLine();
-                while (val != null)
-                {
-                    taogiaodien.listdiem.Add(Convert.ToInt32(val));
-                    val = sr.ReadLine();
-                }
-                sr.Close();
-                fs.Close();
-                if (taogiaodien.listdiem[0] < diem)
-                {
-                    FileStream luu = new FileStream("input.txt", FileMode.OpenOrCreate, FileAccess.Write);
-                    StreamWriter sw = new StreamWriter(luu);
-                    sw.WriteLine(label4.Text);
-                    sw.Close();
-                    luu.Close();
-                }
-            }
-        }
+       
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Mọi dữ liệu sẽ mất khi bạn thoát, bạn chắc chứ", "Thong Bao", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
-            { e.Cancel = true; }
-            
-        }
+      
 
     }
 }

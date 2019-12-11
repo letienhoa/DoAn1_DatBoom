@@ -77,6 +77,12 @@
       <DependentUpon>StartGame.cs</DependentUpon>
     </Compile>
     <Compile Include="taogiaodien.cs" />
+    <Compile Include="Thongtin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thongtin.Designer.cs">
+      <DependentUpon>Thongtin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Play.resx">
       <DependentUpon>Play.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StartGame.resx">
       <DependentUpon>StartGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thongtin.resx">
+      <DependentUpon>Thongtin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -210,6 +219,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon-tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo-hinh-nen-powerpoint-phong-cach-van-go-doc-dao-1484730973-15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vuong.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

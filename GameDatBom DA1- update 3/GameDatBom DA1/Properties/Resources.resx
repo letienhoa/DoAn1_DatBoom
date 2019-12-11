@@ -145,6 +145,9 @@
   <data name="sau" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon-tick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-tick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="vang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,14 +157,14 @@
   <data name="bombbang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bombbang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nenmoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nenmoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loithoat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loithoat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botphai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botphai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loithoat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loithoat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nenmoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nenmoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bombbang_up_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bombbang_up_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -171,6 +174,12 @@
   </data>
   <data name="live" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\live.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bo-hinh-nen-powerpoint-phong-cach-van-go-doc-dao-1484730973-15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bo-hinh-nen-powerpoint-phong-cach-van-go-doc-dao-1484730973-15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoa.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bombbang_down_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bombbang_down_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,7 +223,7 @@
   <data name="Score" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Score.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-tick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-tick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="vuong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vuong.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -63,6 +63,16 @@ namespace GameDatBom_DA1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bo_hinh_nen_powerpoint_phong_cach_van_go_doc_dao_1484730973_15 {
+            get {
+                object obj = ResourceManager.GetObject("bo-hinh-nen-powerpoint-phong-cach-van-go-doc-dao-1484730973-15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bomb {
             get {
                 object obj = ResourceManager.GetObject("bomb", resourceCulture);
@@ -233,6 +243,16 @@ namespace GameDatBom_DA1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hoa {
+            get {
+                object obj = ResourceManager.GetObject("hoa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_tick {
             get {
                 object obj = ResourceManager.GetObject("icon-tick", resourceCulture);
@@ -376,6 +396,16 @@ namespace GameDatBom_DA1.Properties {
         internal static System.Drawing.Bitmap vang {
             get {
                 object obj = ResourceManager.GetObject("vang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vuong {
+            get {
+                object obj = ResourceManager.GetObject("vuong", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -46,5 +46,13 @@ namespace GameDatBom_DA1
             form.ShowDialog();
             this.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Thongtin form = new Thongtin();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
     }
 }

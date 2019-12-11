@@ -28,28 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lb1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbxtop1 = new System.Windows.Forms.TextBox();
+            this.lb1 = new System.Windows.Forms.Label();
             this.btnComeBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lb1
-            // 
-            this.lb1.AutoSize = true;
-            this.lb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lb1.Font = new System.Drawing.Font("Snap ITC", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb1.ForeColor = System.Drawing.Color.Red;
-            this.lb1.Location = new System.Drawing.Point(97, 150);
-            this.lb1.Name = "lb1";
-            this.lb1.Size = new System.Drawing.Size(154, 25);
-            this.lb1.TabIndex = 0;
-            this.lb1.Text = "High Scocer";
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.panel1.Controls.Add(this.tbxtop1);
             this.panel1.Controls.Add(this.lb1);
             this.panel1.Location = new System.Drawing.Point(-3, 2);
@@ -69,9 +57,21 @@
             this.tbxtop1.Size = new System.Drawing.Size(100, 29);
             this.tbxtop1.TabIndex = 10;
             // 
+            // lb1
+            // 
+            this.lb1.AutoSize = true;
+            this.lb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.lb1.Font = new System.Drawing.Font("Snap ITC", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb1.ForeColor = System.Drawing.Color.Red;
+            this.lb1.Location = new System.Drawing.Point(97, 150);
+            this.lb1.Name = "lb1";
+            this.lb1.Size = new System.Drawing.Size(154, 25);
+            this.lb1.TabIndex = 0;
+            this.lb1.Text = "High Scocer";
+            // 
             // btnComeBack
             // 
-            this.btnComeBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnComeBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnComeBack.BackgroundImage = global::GameDatBom_DA1.Properties.Resources.icon_tick;
             this.btnComeBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnComeBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
